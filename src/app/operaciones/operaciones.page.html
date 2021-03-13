@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <!-- Da un paso atras -->
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>operaciones </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+    <ion-item>
+        <ion-label position="floating">numero1: </ion-label>
+        <ion-input [(ngModel)]="da1"></ion-input>
+        <!-- sintaxis de angular ngModel -> actualiza en la interfaz -->
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="floating">operacion </ion-label>
+        <ion-input [(ngModel)]="signo"></ion-input>
+        <!-- sintaxis de angular ngModel -> actualiza en la interfaz -->
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="floating">numero2: </ion-label>
+        <ion-input [(ngModel)]="da2"></ion-input>
+        <!-- sintaxis de angular ngModel -> actualiza en la interfaz -->
+    </ion-item>
+
+    <ion-button color="success" (click)="calcular()">
+        calcular
+    </ion-button>
+    {{this.res}}
+
+
+</ion-content>

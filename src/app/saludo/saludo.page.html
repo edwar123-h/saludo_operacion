@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+
+
+        <ion-title>saludo </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+    <ion-item>
+        <ion-label position="floating">ingresa tu nombre </ion-label>
+        <ion-input [(ngModel)]="nombre"></ion-input>
+        <!-- sintaxis de angular ngModel -> actualiza en la interfaz -->
+    </ion-item>
+
+    <ion-button color="success" (clik)="saludo()">
+        saludar
+    </ion-button>
+</ion-content>
